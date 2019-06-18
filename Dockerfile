@@ -12,7 +12,7 @@ RUN apk update && \
 
 RUN apk update && \
     apk fetch openjdk8 && \
-    apk add openjdk8 nss && \
+    apk add openjdk8 docker nss && \
     rm -rf /var/cache/apk/*
 
 EXPOSE 22
