@@ -10,6 +10,11 @@ RUN apk update && \
     cp -a /etc/ssh /etc/ssh.cache && \
     rm -rf /var/cache/apk/*
 
+RUN apk update && \
+    apk fetch openjdk8 && \
+    apk add openjdk8 && \
+    rm -rf /var/cache/apk/*
+
 EXPOSE 22
 
 COPY entry.sh /entry.sh
